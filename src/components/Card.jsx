@@ -12,9 +12,19 @@ function Card({
 	popularityCounter,
 	availableOnOrder,
 	photos,
-	data,
-}) {return (
-		<Link to={`/products/${id}`} state={{ data: data }} >
+	test_data,
+}) {
+	return (
+		<Link to={`/products/${id}`} state={{ data: test_data }} >
+			{/* Вызов даты на карточке 
+			
+			const location = useLocation();
+			console.log(props, " props");
+			console.log(location, " useLocation Hook");
+			const data = location.state?.data;
+			
+			*/}
+
 			<div className="content__card">
 				<div className="card-img">
 					<img src={photos} alt="Фото Ткани" />

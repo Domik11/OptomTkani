@@ -61,7 +61,7 @@ export const buyer = [
 ];
 
 
-export const data = {
+export const test_data = {
 	category_id: 123,
 	category_name: "sadasd",
 	description: "This is a great.",
