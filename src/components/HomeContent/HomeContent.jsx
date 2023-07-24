@@ -40,7 +40,7 @@ const mostRecentProducts = products.slice(-16);
 RandomCards(discountedProducts, fourRandomDiscountedCards, 4);
 RandomCards(couldOrderProducts, fourRandomAvailableOnOrderCards, 4);
 
-function HomePage() {
+function HomePage({data}) {
 	return (
 		<div className="content">
 			{window.innerWidth < 1439 ? null : <Banner1 />}
@@ -49,7 +49,7 @@ function HomePage() {
 				{/* Здесь рендерится 16 самых свежих товаров на сайте */}
 				{Object.keys(mostRecentProducts).map((key) => {
 					const sale = mostRecentProducts[key];
-					return <Card {...sale} key={sale.id} />;
+					return <Card {...sale} key={sale.id} data={data}/>;
 				})}
 			</div>
 			<Banner2 />

@@ -5,6 +5,8 @@ import Step2 from '../components/create-steps/Step2';
 import Step3 from '../components/create-steps/Step3';
 import Step4 from '../components/create-steps/Step4';
 import Step5 from '../components/create-steps/Step5';
+import axios from 'axios';
+
 
 function CreateNewProductPage() {
 	const [picked_category_name, set_picked_category_name] = useState('');

@@ -3,7 +3,7 @@ import Header from '../../Header/Header';
 import Footer from '../../Footer/Footer';
 import Sidebar from '../../Sidebar/Sidebar';
 import HomeContent from '../../HomeContent/HomeContent';
-import { categories } from '../../../data/data.js';
+import { categories , data } from '../../../data/data.js';
 
 function Home() {
 
@@ -12,7 +12,7 @@ function Home() {
 			<Header />
             <div className="content-wrapper">
                 <Sidebar list={categories} title={"Категории"} toPath={"/categories"}/>
-				<HomeContent />
+				<HomeContent data={data}/>
             </div>
 			<Footer />
 		</>
