@@ -1,0 +1,217 @@
+.profile-page {
+    .content-wrapper {
+        justify-content: initial;
+        column-gap: 163px;
+    }
+
+    .title {display: none;}
+
+    .avatar {
+        width: 125px;
+        height: 125px;
+        border-radius: 100%;
+        position: relative;
+
+        img {
+            width: 125px;
+            height: 125px;
+            border-radius: 100%;
+        }
+
+        .change-avatar {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 41px;
+            height: 41px;
+            border-radius: 100%;
+            background-color: #BC3920;
+            cursor: pointer;
+
+            .img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    
+    .personal-info {
+        margin-top: 34px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+
+    .pink-button {
+        margin-top: 30px;
+    }
+}
+
+.logout {
+    font-size: 16px;
+    color: #BC3920;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1439px) {
+    .profile-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .title {
+            display: block;
+            font-size: 30px;
+            margin: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .avatar {
+            margin: 0 auto;
+        }
+    }
+
+    .personal-nav-list {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 0 30px;
+        width: 360px;
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+            width: fit-content;
+            align-items: center;
+        }
+
+        .img-container {
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            background-color: #F9D1FF;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 22px;
+            }
+        }
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #1D5259;
+        }
+    }
+}
+@media screen and (max-width: 1080px) {
+    .profile-page {
+        .content-wrapper {
+            padding: 40px  0 150px 0;
+        }
+    }  
+
+    .personal-nav-list {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 0 30px;
+        width: 360px;
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+            width: fit-content;
+            align-items: center;
+        }
+
+        .img-container {
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            background-color: #F9D1FF;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 22px;
+            }
+        }
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #1D5259;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .profile-page {
+        position: relative;
+
+        .content-wrapper {
+            padding: 0  0 150px 0;
+        }
+
+        .profile-content-b {
+            margin-top: 70px;
+
+            &::before {
+                z-index: -1;
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--pink);
+                width: 100vw;
+                height: 140px;
+            }
+        }
+
+        .profile-content-s {
+            margin-top: 70px;
+
+            &::before {
+                z-index: -1;
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #F9D1FF;
+                width: 100vw;
+                height: 140px;
+            }
+        }
+    }
+
+
+}

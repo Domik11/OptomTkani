@@ -1,0 +1,31 @@
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 115px);
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.cat-page-title {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: -15px;
+}
+
+@media screen and (max-width: 1080px) {
+    .cat-grid {
+        max-width: 720px;
+        grid-template-columns: repeat(5, 115px);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .cat-grid {
+        max-width: 360px;
+        grid-template-columns: repeat(3, 100px);
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+
+    .cat-page .content-wrapper {
+        padding-bottom: 150px;
+    }
+}

@@ -1,0 +1,276 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 66px;
+	padding: 0 110px;
+	max-width: 1440px;
+	margin: 0 auto;
+
+	* {
+		font-family: var(--fira);
+	}
+
+	&__title {
+		font-family: var(--gilroy);
+		font-size: 42rem;
+		color: var(--logo-1st-color);
+		font-weight: 700;
+
+		&-slogan {
+			display: none;
+		}
+
+		i {
+			font-family: var(--gilroy);
+			color: var(--logo-2nd-color);
+			font-style: normal;
+			font-weight: 700;
+		}
+	}
+
+	&__search {
+		display: flex;
+		align-items: center;
+		border: 2px solid var(--input-color);
+		border-radius: 60px;
+		width: 589px;
+		height: 40px;
+		column-gap: 10px;
+		padding: 0 20px;
+		margin-left: 71px;
+		margin-right: 25px;
+
+		input {
+			font-size: 20rem;
+			color: var(--input-color);
+			font-weight: 400;
+			&::placeholder {
+				font-size: 20rem;
+				font-weight: 400;
+				font-family: var(--fira);
+			}
+		}
+
+		&-icon {
+			width: 20px;
+		}
+	}
+
+	&__btns-block {
+		display: flex;
+		align-items: center;
+		column-gap: 8px;
+
+		button {
+			display: flex;
+			align-items: center;
+			column-gap: 7px;
+			padding: 10px;
+			font-size: 16rem;
+			line-height: 19px;
+			border-radius: 60px;
+			font-weight: 300;
+			height: 40px;
+		}
+
+		.header-cart-btn {
+			border: 2px solid black;
+		}
+
+		.create-new {
+			background-color: var(--pink);
+			color: white;
+			padding: 0 13px;
+			width: 170px;
+
+			&-icon {
+				position: relative;
+				background-color: #fff;
+				border-radius: 100%;
+				width: 22px;
+				height: 22px;
+
+				&::after,
+				&::before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					background-color: var(--pink);
+				}
+				&::before {
+					width: 12px;
+					height: 2px;
+				}
+				&::after {
+					width: 2px;
+					height: 12px;
+				}
+			}
+		}
+
+		.profile {
+			column-gap: 6px;
+			border: 2px solid black;
+			height: 40px;
+			font-size: 16rem;
+			font-weight: 300;
+			padding: 0 9px;
+
+			.person-icon {
+				border: 2px solid black;
+				border-radius: 100%;
+				width: 22px;
+				overflow: hidden;
+				height: 22px;
+				position: relative;
+
+				&-body {
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					top: 11px;
+					width: 16px;
+					height: 16px;
+					border-radius: 100%;
+					border: 2px solid black;
+				}
+
+				&-head {
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					top: 2px;
+					width: 8px;
+					height: 8px;
+					border-radius: 100%;
+					border: 2px solid black;
+				}
+			}
+		}
+
+		.in-page {
+			background-color: var(--pink);
+			border: 2px solid var(--pink);
+			color: white;
+
+			.person-icon {
+				border: 2px solid white;
+
+				&-body {
+					border: 2px solid white;
+				}
+
+				&-head {
+					border: 2px solid white;
+				}
+			}
+			svg path {fill: white}
+		}
+	}
+}
+
+@media screen and (max-width: 1439px) {
+	.header {
+		flex-direction: column;
+		height: 404px;
+		padding: 0 30px;
+		justify-content: center;
+		max-width: 904px;
+
+		&__title {
+			font-size: 90px;
+			text-align: center;
+
+			&-slogan {
+				display: block;
+				font-size: 42px;
+				font-weight: 400;
+			}
+		}
+
+		&__btns-block {
+			display: none;
+		}
+
+		&__search {
+			height: 120px;
+			width: 100%;
+			margin: 60px 0 0;
+			border-radius: 90px;
+			column-gap: 30px;
+			input {
+				font-size: 42px;
+				&::placeholder {
+					font-size: 42px;
+				}
+			}
+			&-icon {
+				width: 50px;
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.header {
+		height: 304px;
+		max-width: 720px;
+		&__title {
+			font-size: 60px;
+
+			&-slogan {
+				font-size: 22px;
+			}
+		}
+		&__search {
+			height: 50px;
+			width: 100%;
+			margin-top: 50px;
+			input {
+				font-size: 28px;
+				&::placeholder {
+					font-size: 28px;
+				}
+			}
+
+			&-icon {
+				width: 25px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 720px) {
+	.header {
+		height: 204px;
+		padding: 0 10px;
+		max-width: 360px;
+		&__title {
+			font-size: 30px;
+
+			&-slogan {
+				font-size: 16px;
+			}
+		}
+		&__search {
+			height: 40px;
+			margin-top: 25px;
+			column-gap: 10px;
+			input {
+				// width: 100%;
+				font-size: 14px;
+				&::placeholder {
+					font-size: 14px;
+				}
+			}
+
+			&-icon {
+				width: 20px;
+				margin-left: 0;
+			}
+		}
+	}
+}
