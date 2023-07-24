@@ -13,9 +13,8 @@ function Card({
 	availableOnOrder,
 	photos,
 	data,
-}) {
-	return (
-		<Link to={{pathname: `/products/${id}`, props: data}}>
+}) {return (
+		<Link to="/products/285" state={{ data: data }} >
 			<div className="content__card">
 				<div className="card-img">
 					<img src={photos} alt="Фото Ткани" />
