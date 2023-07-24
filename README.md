@@ -1,3 +1,9 @@
+
+### Чтобы авторизоватья необходимо сохранить эти значения в localstorage. Для работы на локалхосте в качестве покупателя заменить значение user_role на "buyer" ###
+localStorage.setItem('userData', JSON.stringify({"id":"4","user_name":"sadf","user_phone":"+79965914513","user_address":null,"user_avatar":null,"user_role":"seller","fav_prods":null,"fav_shops":null,"shop_name":"1","shop_desc":"1","shop_address":"1","my_prods":null,"orders":null,"rating":null,"reg_date":"2023-07-24","user_password":"$2y$10$xjyTjHowoxoIMyn8Gbi7nOTSOX7pAGAyd3U4en2NuLQncUDbbLpbK"}));
+
+localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwicGhvbmUiOiIrNzk5NjU5MTQ1MTMiLCJleHAiOjE2OTAzNzMzNjF9.yD_SFwTu4OaOLFTAo0LGwcL_nbKxX-TRUxgK-w4-O9M');
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
