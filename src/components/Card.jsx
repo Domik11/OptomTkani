@@ -12,16 +12,16 @@ function Card({
 	popularityCounter,
 	availableOnOrder,
 	photos,
-	test_data,
+	data
 }) {
 	return (
-		<Link to={`/products/${id}`} state={{ data: test_data }} >
-			{/* Вызов даты на карточке 
-			
+		<Link to={`/products/${id}`} state={{ data: data }} >
+			{/* Вызов данных на странице товара
+			import { useLocation } from 'react-router-dom';
+
 			const location = useLocation();
-			console.log(props, " props");
-			console.log(location, " useLocation Hook");
-			const data = location.state?.data;
+    		const data = location.state?.data;
+			console.log(data)
 			
 			*/}
 

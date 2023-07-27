@@ -60,28 +60,3 @@ export const buyer = [
 	{ name: 'Стать продавцом', path: '/upgrade-account', icon : 'https://i.ibb.co/LR84X4g/time.png' },
 ];
 
-
-export const test_data = {
-	category_id: 123,
-	category_name: "sadasd",
-	description: "This is a great.",
-	color: "Black",
-	compound: "XYZ",
-	length: 15,
-	width: 10,
-	density: 0.8,
-	country: "USA",
-	currency: "USD",
-	price_for: "1 piece",
-	price: 49.99,
-	can_i_order: true,
-	time_to_deliver: "2-3 business days",
-	pre_pay: "50%",
-	discount: 10,
-	sale_start: "2023-07-30",
-	sale_end: "2023-08-15",
-	photo1: "photo1.jpg",
-	photo2: "photo2.jpg",
-	photo3: "photo3.jpg",
-	photo4: "photo4.jpg",
-};

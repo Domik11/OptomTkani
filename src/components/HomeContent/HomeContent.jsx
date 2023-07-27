@@ -40,7 +40,9 @@ const mostRecentProducts = products.slice(-16);
 RandomCards(discountedProducts, fourRandomDiscountedCards, 4);
 RandomCards(couldOrderProducts, fourRandomAvailableOnOrderCards, 4);
 
-function HomePage({data}) {
+
+
+function HomePage() {
 	return (
 		<div className="content">
 			{window.innerWidth < 1439 ? null : <Banner1 />}
@@ -49,7 +51,8 @@ function HomePage({data}) {
 				{/* Здесь рендерится 16 самых свежих товаров на сайте */}
 				{Object.keys(mostRecentProducts).map((key) => {
 					const sale = mostRecentProducts[key];
-					return <Card {...sale} key={sale.id} data={data}/>;
+					
+					return <Card {...sale} key={sale.id} data={sale}/>;
 				})}
 			</div>
 			<Banner2 />
@@ -58,7 +61,7 @@ function HomePage({data}) {
 				<div className="content__title">Распродажа</div>
 				{Object.keys(fourRandomDiscountedCards).map((key, index) => {
 					const sale = fourRandomDiscountedCards[key];
-					return <Card {...sale} key={index} />;
+					return <Card {...sale} key={index} data={sale}/>;
 				})}
 			</div>
 
@@ -66,7 +69,7 @@ function HomePage({data}) {
 				<div className="content__title">Ткань на заказ</div>
 				{Object.keys(fourRandomAvailableOnOrderCards).map((key, index) => {
 					const sale = fourRandomAvailableOnOrderCards[key];
-					return <Card {...sale} key={index} />;
+					return <Card {...sale} key={index} data={sale}/>;
 				})}
 			</div>
 
@@ -74,7 +77,7 @@ function HomePage({data}) {
 				<div className="content__title">Популярные</div>
 				{Object.keys(mostPopularProducts).map((key, index) => {
 					const sale = mostPopularProducts[key];
-					return <Card {...sale} key={index} />;
+					return <Card {...sale} key={index} data={sale}/>;
 				})}
 			</div>
 		</div>
